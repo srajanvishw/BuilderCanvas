@@ -44,7 +44,7 @@ React · TypeScript · SVG (custom-built canvas engine, no graph library) · Tai
 ## Running locally
 
 ```bash
-git clone https://github.com/<your-username>/buildercanvas.git
+git clone https://github.com/srajanvishw/buildercanvas.git
 cd buildercanvas
 npm install
 ```
