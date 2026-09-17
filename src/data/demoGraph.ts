@@ -1,0 +1,126 @@
+import { GraphData } from "../types/graph";
+
+export const demoGraph: GraphData = {
+  nodes: [
+    {
+      id: "frontend",
+      type: "frontend",
+      label: "Frontend",
+      description: "React SPA",
+      x: 120,
+      y: 280,
+    },
+    {
+      id: "api",
+      type: "api",
+      label: "API Gateway",
+      description: "REST endpoints",
+      x: 420,
+      y: 280,
+    },
+    {
+      id: "auth",
+      type: "service",
+      label: "Auth Service",
+      description: "JWT authentication",
+      x: 720,
+      y: 140,
+    },
+    {
+      id: "database",
+      type: "database",
+      label: "Database",
+      description: "PostgreSQL",
+      x: 720,
+      y: 280,
+    },
+    {
+      id: "payments",
+      type: "external",
+      label: "Payments",
+      description: "Stripe integration",
+      x: 720,
+      y: 420,
+    },
+  ],
+  edges: [
+    { id: "e-frontend-api", source: "frontend", target: "api" },
+    { id: "e-api-auth", source: "api", target: "auth" },
+    { id: "e-api-database", source: "api", target: "database" },
+    { id: "e-api-payments", source: "api", target: "payments" },
+  ],
+  tasks: [
+    {
+      id: "task-frontend-1",
+      nodeId: "frontend",
+      title: "Set up React project with Vite",
+      completed: true,
+    },
+    {
+      id: "task-frontend-2",
+      nodeId: "frontend",
+      title: "Implement routing structure",
+      completed: true,
+    },
+    {
+      id: "task-frontend-3",
+      nodeId: "frontend",
+      title: "Create reusable UI components",
+      completed: false,
+    },
+    {
+      id: "task-frontend-4",
+      nodeId: "frontend",
+      title: "Integrate with API Gateway",
+      completed: false,
+    },
+    {
+      id: "task-api-1",
+      nodeId: "api",
+      title: "Design REST API endpoints",
+      completed: true,
+    },
+    {
+      id: "task-api-2",
+      nodeId: "api",
+      title: "Implement authentication middleware",
+      completed: true,
+    },
+    {
+      id: "task-api-3",
+      nodeId: "api",
+      title: "Add rate limiting",
+      completed: false,
+    },
+    {
+      id: "task-auth-1",
+      nodeId: "auth",
+      title: "Implement JWT token generation",
+      completed: true,
+    },
+    {
+      id: "task-auth-2",
+      nodeId: "auth",
+      title: "Add refresh token logic",
+      completed: false,
+    },
+    {
+      id: "task-database-1",
+      nodeId: "database",
+      title: "Design database schema",
+      completed: true,
+    },
+    {
+      id: "task-database-2",
+      nodeId: "database",
+      title: "Set up migrations",
+      completed: false,
+    },
+    {
+      id: "task-payments-1",
+      nodeId: "payments",
+      title: "Integrate Stripe SDK",
+      completed: false,
+    },
+  ],
+};
